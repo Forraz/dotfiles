@@ -1,0 +1,8 @@
+configuration {
+  modes: [ combi, run, drun ];
+  combi-modes: [ window, drun, run ];
+}
+
+
+
+@theme "/home/forraz/.config/rofi/themes/rounded-nord-dark.rasi"
