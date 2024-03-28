@@ -36,6 +36,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
+Plug 'numToStr/Comment.nvim'
+
+Plug 'Pocco81/auto-save.nvim'
 
 call plug#end()
 
@@ -46,6 +49,16 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 set background=dark
 colorscheme nightfly
+
+lua << EOF
+	require("auto-save").setup {
+		-- your config goes here
+		-- or just leave it empty :)
+	}
+EOF
+
+
+lua require('Comment').setup()
 
 
 lua <<EOF
