@@ -1,0 +1,12 @@
+live_config_reload = true
+
+[colors.primary]
+background = "#18181B"
+foreground = "#cccccc"
+
+[cursor.style]
+shape = "Beam"
+
+[font]
+size = 8
+normal = { family = "JetBrainsMonoNerdFont", style = ""}

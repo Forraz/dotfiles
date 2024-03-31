@@ -14,20 +14,30 @@ bspc config window_gap		12
 bspc config focus_follows_pointer false
 
 
-bspc rule -a Opera follow=on focus=on desktop=2
-bspc rule -a ArmCord follow=on focus=on desktop=4
-bspc rule -a TelegramDesktop follow=on focus=on desktop=4
+#bspc rule -a Opera follow=on focus=on desktop=2
+#bspc rule -a ArmCord follow=on focus=on desktop=4
+#bspc rule -a TelegramDesktop follow=on focus=on desktop=4
 
 
 feh --bg-fill ~/wp/wp0.jpg
 
 sleep 0.3
 
+setxkbmap -layout us,ru -variant ,, -option 'grp:alt_shift_toggle'
+
+killall polybar
+sleep 0.1
 $HOME/.polybar/launch.sh &
+
+killall picom
+sleep 0.1
 picom --config $HOME/.config/picom/picom.conf &
-killall $HOME/scripts/low-battery-notification
+
+killall greenclip
+sleep 0.1
 greenclip daemon &
-$HOME/scripts/low-battery-notification &
-sh $HOME/scripts/autostart.sh &
-bash $HOME/scripts/templogger.sh &
+
+#$HOME/scripts/low-battery-notification &
+#sh $HOME/scripts/autostart.sh &
+#bash $HOME/scripts/templogger.sh &
 
